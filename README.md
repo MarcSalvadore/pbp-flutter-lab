@@ -35,3 +35,40 @@ Keduanya bersifat *immutable*, namun perbedaannya adalah **const** tidak bisa di
 4. Membuat button **+** dan **-** dengan menerapkan **onPressed**.
 5. Render text ganjil-genap dengan warnanya menggunakan **TextStyle**.
 6. Untuk bonus, menerapkan condition if untuk menampilkan button **-** jika counter = 0.
+
+# Tugas 8
+
+## **Navigator.push** vs **Navigator.pushReplacement**
+
+**Navigator.push** menyimpan atau mengupdate route yang ada, sedangkan **Navigator.pushReplacement** menggantikan route sebelumnya dengan route yang baru.
+
+## Widget yang dipakai :
+
+* **TextInput** = untuk membuat text form yang berguna untuk menerima input pengguna.
+* **TextButton** = untuk membuat button input dari text form.
+* **DropdownButtonFormField** = membuat dropdown menu untuk memilih jenis.
+* **Card** = untuk menampilkan data pada menu *Budget List*.
+* **Form** = untuk mengumpulkan elemen text form.
+
+## Jenis-jenis *event* yang ada pada Flutter :
+
+* **onPressed**
+* **onSaved**
+* **onChange**
+* **onTap**
+
+## Cara kerja **Navigator** dalam "mengganti" halaman dari aplikasi Flutter
+
+**Navigator** berfungsi untuk menyimpan route pada app, dimana route tersebut mengarah pada suatu menu. Pada saat **click** suatu menu maka **Navigator.push** akan melakukan perpindahan route dan menampilkan laman yang dituju, metode ini menggunakan konsep **pop** dari route yang tersimpan dalam stack.
+
+## Cara implementasi *checklist*
+
+* Membuat file add.dart, drawer.dart, listing.dart, dan model.dart
+* Menambahkan dependencies pada **pubspec.yaml** untuk menggunakan **Provider**
+* Menerapkan fungsionalitas file :
+> * **add.dart** untuk menerima input text dari **TextInput**
+> * **model.dart** untuk menerima data yang diinput menggunakan **Form**
+> * **listing.dart** untuk menampilkan data dengan layout **Card**
+> * **drawer.dart** untuk membuat tombol navigasi *hamburger*
+
+
