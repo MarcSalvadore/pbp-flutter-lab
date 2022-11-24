@@ -1,5 +1,5 @@
-import 'package:counter_7/model/fetcher.dart';
-import 'package:counter_7/model/watchlist.dart';
+import 'package:counter_7/json/fetcher.dart';
+import 'package:counter_7/json/watchlist.dart';
 import 'package:counter_7/watchlist/detail.dart';
 import 'package:flutter/material.dart';
 

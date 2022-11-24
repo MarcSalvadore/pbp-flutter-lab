@@ -1,4 +1,4 @@
-import 'package:counter_7/model/watchlist.dart';
+import 'package:counter_7/json/watchlist.dart';
 import 'package:flutter/material.dart';
 
 import '../drawer.dart';
@@ -80,7 +80,7 @@ class _WatchDetailPageState extends State<WatchDetailPage> {
             FieldRow(
               title: "Release Date: ",
               child:
-                  "${months[releaseDate.month]} ${releaseDate.day}, ${releaseDate.year}",
+                widget.watchData.fields.releaseDate,
             ),
             const SizedBox(height: 16.0),
             FieldRow(

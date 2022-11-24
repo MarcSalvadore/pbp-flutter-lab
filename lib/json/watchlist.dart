@@ -37,7 +37,7 @@ class Fields {
   bool watched;
   String title;
   double rating;
-  DateTime releaseDate;
+  String releaseDate;
   String review;
 
   factory Fields.fromRawJson(String str) => Fields.fromJson(json.decode(str));
@@ -48,7 +48,7 @@ class Fields {
         watched: json["watched"],
         title: json["title"],
         rating: json["rating"],
-        releaseDate: DateTime.parse(json["release_date"]),
+        releaseDate: json["release_date"],
         review: json["review"],
       );
 
@@ -56,8 +56,7 @@ class Fields {
         "watched": watched,
         "title": title,
         "rating": rating,
-        "release_date":
-            "${releaseDate.year.toString().padLeft(4, '0')}-${releaseDate.month.toString().padLeft(2, '0')}-${releaseDate.day.toString().padLeft(2, '0')}",
+        "release_date": releaseDate,
         "review": review,
       };
 }
