@@ -71,4 +71,25 @@ Keduanya bersifat *immutable*, namun perbedaannya adalah **const** tidak bisa di
 > * **listing.dart** untuk menampilkan data dengan layout **Card**
 > * **drawer.dart** untuk membuat tombol navigasi *hamburger*
 
+# Tugas 9
+
+## Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+
+Kita bisa mengambil data tanpa membuat model, tetapi hal tersebut tidak lebih baik dibanding membuat model terlebih dahulu, karena kita tidak tahu value dari data yang akan kita ambil.
+
+## Widget yang dipakai dalam proyek:
+
+* Card = membuat "tempat" untuk *title* film dari data mywatchlist
+* Checkbox = membuat checkbox **watched**
+* spacer = memodifikasi jarak antar card agar enak dilihat
+* FutureBuilder = memeriksa dan mengambil update child untuk di output kedepannya
+* ListView = membuat tempat untuk item-item dari widget
+* Expanded = untuk mengatur pembesaran widget child agar menyesuai *row* dan *column*
+
+## Mekanisme pengambilan data dari JSON hingga output pada flutter
+
+Dimulai dari HTTP request ke server melalui *path* yang akan memberikan akses kepada *views*, lalu server akan memberikan respons melalui **response.bodyBytes**. Respons tersebut akan diterima dan di *decode* dengan **jsonDecode** untuk menghasilkan model yang akan dipakai pada flutter.
+
+## Implementasi *checklist*
+
 
